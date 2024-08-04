@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework Condition="$([MSBuild]::IsOSPlatform('windows'))">net8.0-windows10.0.19041.0</TargetFramework>
+    <TargetFramework Condition="$([MSBuild]::IsOSPlatform('osx'))">net8.0-macos</TargetFramework>
+    <Nullable>enable</Nullable>
+    <AssemblyName>Bible</AssemblyName>
+    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="$([MSBuild]::IsOSPlatform('windows'))">
+    <OutputType>WinExe</OutputType>
+    <ApplicationManifest>Platforms\Windows\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="$([MSBuild]::IsOSPlatform('osx'))">
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <!-- Windows -->
+  <ItemGroup Condition="$([MSBuild]::IsOSPlatform('windows'))">
+    <Compile Remove="**\MacOS\**\*.cs" />
+    <None Include="**\MacOS\**\*.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
+  </ItemGroup>
+
+  <!-- Mac Catalyst -->
+  <ItemGroup Condition="$([MSBuild]::IsOSPlatform('osx'))">
+    <Compile Remove="**\Windows\**\*.cs" />
+    <None Include="**\Windows\**\*.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.1.1" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.1.1" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.1.1" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.1.1" />
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.1.1" />
+    <PackageReference Include="FluentAvaloniaUI" Version="2.1.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Serilog.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Serilog.Extensions.Logging" Version="8.0.0" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="8.0.2" />
+    <PackageReference Include="Serilog.Sinks.File" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json" CopyToOutputDirectory="Always" />
+    <Content Include="appsettings.Staging.json" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bible.Abstractions\Bible.Abstractions.csproj" />
+    <ProjectReference Include="..\Bible.ViewModels\Bible.ViewModels.csproj" />
+  </ItemGroup>
+</Project>
