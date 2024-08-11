@@ -1,5 +1,7 @@
 using Bible.Abstractions.ViewModels;
+using Bible.ViewModels.Abstractions;
 using Bible.ViewModels.Internals;
+using Bible.ViewModels.Pages;
 using CommunityToolkit.Mvvm.Messaging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,7 +21,11 @@ public static class IServiceCollectionExtensions
     /// <returns> ViewModel 을 사용할 수 있도록 <see cref="IServiceCollection" /> 구현체에 필요한 요소들을 등록 후 <see cref="IServiceCollection" /> 을 반환합니다. </returns>
     public static IServiceCollection UseViewModel(this IServiceCollection services, IConfiguration configuration)
     {
-        return services.AddSingleton<IViewModelLocator, ViewModelLocator>().AddViewModels();
+        return services
+            .AddSingleton<IViewModelLocator, ViewModelLocator>()
+            .AddSingleton<INavigation, Navigation>()
+            .AddSingleton<IMessenger>(_ => WeakReferenceMessenger.Default)
+            .AddViewModels();
     }
 
     private static IServiceCollection AddViewModels(this IServiceCollection services)
