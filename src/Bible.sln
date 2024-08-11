@@ -14,7 +14,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bible.ViewModels", "Bible.V
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bible.Abstractions", "Bible.Abstractions\Bible.Abstractions.csproj", "{0C48C12B-C2C6-4D21-907E-0C234074CF0A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "repositorys", "repositorys", "{BE357A63-985F-4161-B408-38F4CC919A94}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "repository", "repository", "{A91C129A-A573-4309-9DDB-A98A2CB9FDDB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bible.Repository", "Bible.Repository\Bible.Repository.csproj", "{8866CCEB-A258-43EA-B128-4134AF79BE9A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bible.Crawler.Abstractions", "Bible.Crawler\src\Bible.Crawler.Abstractions\Bible.Crawler.Abstractions.csproj", "{9ED1F725-8323-4AC1-86C0-BBEB983BFFAE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bible.Crawler", "Bible.Crawler\src\Bible.Crawler\Bible.Crawler.csproj", "{5F5ACDE3-8F1C-4D26-8F12-7DFBDF9C0891}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,9 +40,26 @@ Global
 		{0C48C12B-C2C6-4D21-907E-0C234074CF0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C48C12B-C2C6-4D21-907E-0C234074CF0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C48C12B-C2C6-4D21-907E-0C234074CF0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8866CCEB-A258-43EA-B128-4134AF79BE9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8866CCEB-A258-43EA-B128-4134AF79BE9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8866CCEB-A258-43EA-B128-4134AF79BE9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8866CCEB-A258-43EA-B128-4134AF79BE9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ED1F725-8323-4AC1-86C0-BBEB983BFFAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ED1F725-8323-4AC1-86C0-BBEB983BFFAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ED1F725-8323-4AC1-86C0-BBEB983BFFAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ED1F725-8323-4AC1-86C0-BBEB983BFFAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F5ACDE3-8F1C-4D26-8F12-7DFBDF9C0891}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F5ACDE3-8F1C-4D26-8F12-7DFBDF9C0891}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F5ACDE3-8F1C-4D26-8F12-7DFBDF9C0891}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F5ACDE3-8F1C-4D26-8F12-7DFBDF9C0891}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8866CCEB-A258-43EA-B128-4134AF79BE9A} = {A91C129A-A573-4309-9DDB-A98A2CB9FDDB}
+		{9ED1F725-8323-4AC1-86C0-BBEB983BFFAE} = {A91C129A-A573-4309-9DDB-A98A2CB9FDDB}
+		{5F5ACDE3-8F1C-4D26-8F12-7DFBDF9C0891} = {A91C129A-A573-4309-9DDB-A98A2CB9FDDB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8AC04585-6FFB-497F-8252-8AA93C97B4C0}

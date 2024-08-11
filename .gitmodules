@@ -1,0 +1,3 @@
+[submodule "src/Bible.Crawler"]
+path = src/Bible.Crawler
+url = https://github.com/jonghoon023/Bible.Crawler.git
