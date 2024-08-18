@@ -22,6 +22,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bible.Crawler.Abstractions"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bible.Crawler", "Bible.Crawler\src\Bible.Crawler\Bible.Crawler.csproj", "{5F5ACDE3-8F1C-4D26-8F12-7DFBDF9C0891}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bible.Repository.Abstractions", "Bible.Repository.Abstractions\Bible.Repository.Abstractions.csproj", "{5680C788-F669-4CE3-BE31-73E3F6F1832D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +54,10 @@ Global
 		{5F5ACDE3-8F1C-4D26-8F12-7DFBDF9C0891}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F5ACDE3-8F1C-4D26-8F12-7DFBDF9C0891}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F5ACDE3-8F1C-4D26-8F12-7DFBDF9C0891}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5680C788-F669-4CE3-BE31-73E3F6F1832D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5680C788-F669-4CE3-BE31-73E3F6F1832D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5680C788-F669-4CE3-BE31-73E3F6F1832D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5680C788-F669-4CE3-BE31-73E3F6F1832D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +66,7 @@ Global
 		{8866CCEB-A258-43EA-B128-4134AF79BE9A} = {A91C129A-A573-4309-9DDB-A98A2CB9FDDB}
 		{9ED1F725-8323-4AC1-86C0-BBEB983BFFAE} = {A91C129A-A573-4309-9DDB-A98A2CB9FDDB}
 		{5F5ACDE3-8F1C-4D26-8F12-7DFBDF9C0891} = {A91C129A-A573-4309-9DDB-A98A2CB9FDDB}
+		{5680C788-F669-4CE3-BE31-73E3F6F1832D} = {A91C129A-A573-4309-9DDB-A98A2CB9FDDB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8AC04585-6FFB-497F-8252-8AA93C97B4C0}

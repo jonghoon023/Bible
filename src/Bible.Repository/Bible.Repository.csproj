@@ -7,8 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.8" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Bible.Crawler\src\Bible.Crawler.Abstractions\Bible.Crawler.Abstractions.csproj" />
     <ProjectReference Include="..\Bible.Crawler\src\Bible.Crawler\Bible.Crawler.csproj" />
+    <ProjectReference Include="..\Bible.Repository.Abstractions\Bible.Repository.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>
