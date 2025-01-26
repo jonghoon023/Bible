@@ -60,7 +60,7 @@
 	</ItemDefinitionGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.1" />
 	</ItemGroup>
 
 	<ItemGroup Condition="$(IsPackable) == 'true'">
@@ -79,7 +79,7 @@
 	</ItemGroup>
 
 	<ItemGroup Condition="$(MSBuildProjectExtension) == '.csproj'" >
-		<PackageReference Include="SonarAnalyzer.CSharp" Version="10.4.0.108396" PrivateAssets="all" />
+		<PackageReference Include="SonarAnalyzer.CSharp" Version="10.5.0.109200" PrivateAssets="all" />
 		<PackageReference Include="Roslynator.Analyzers" Version="4.12.10" PrivateAssets="all" />
 	</ItemGroup>
 
