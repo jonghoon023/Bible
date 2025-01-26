@@ -43,10 +43,6 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<ImplicitUsings>enable</ImplicitUsings>
-	</PropertyGroup>
-
-	<PropertyGroup>
 		<EnableNETAnalyzers>true</EnableNETAnalyzers>
 		<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
 		<AnalysisMode>All</AnalysisMode>

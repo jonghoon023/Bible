@@ -1,12 +1,20 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
+		<TargetFramework Condition="$([MSBuild]::IsOSPlatform('windows'))">net9.0-windows10.0.19041.0</TargetFramework>
+		<TargetFramework Condition="$([MSBuild]::IsOSPlatform('osx'))">net9.0-macos</TargetFramework>
+	</PropertyGroup>
+	
+	<PropertyGroup>
 		<OutputType>WinExe</OutputType>
-		<TargetFramework>net9.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<BuiltInComInteropSupport>true</BuiltInComInteropSupport>
-		<ApplicationManifest>app.manifest</ApplicationManifest>
 		<AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="$([MSBuild]::IsOSPlatform('windows'))">
+		<OutputType>WinExe</OutputType>
+		<ApplicationManifest>Internals\Platforms\Windows\app.manifest</ApplicationManifest>
 	</PropertyGroup>
 	
 	<ItemGroup>
@@ -29,5 +37,9 @@
 		<PackageReference Include="Serilog.Extensions.Logging" Version="9.0.0" />
 		<PackageReference Include="Serilog.Settings.Configuration" Version="9.0.0" />
 		<PackageReference Include="Serilog.Sinks.File" Version="6.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Bible.Abstractions\Bible.Abstractions.csproj" />
 	</ItemGroup>
 </Project>

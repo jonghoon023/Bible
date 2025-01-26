@@ -1,3 +1,5 @@
+using Bible.Abstractions.Views;
+using Bible.Views.Internals.Platforms.Windows;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Bible.Views.Internals.Extensions;
